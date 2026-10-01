@@ -10,14 +10,18 @@ El archivo `hespe-data.csv` corresponde al dataset **Higher Education Students P
 
 La licencia permite compartir y adaptar el dataset siempre que se otorgue atribución adecuada.
 
-## Características
+## Estructura usada
 
 - 145 observaciones
-- 31 features
-- 1 identificador de estudiante
+- 33 columnas en el CSV
+- 1 identificador: `student_id`
+- 31 variables predictoras
 - target `grade` con 8 categorías: `Fail`, `DD`, `DC`, `CC`, `CB`, `BB`, `BA`, `AA`
-- sin valores faltantes en la versión utilizada
+- 0 valores faltantes
+- 0 duplicados completos
 
 ## Archivo de este repositorio
 
-El CSV fue normalizado a nombres de columnas descriptivos en `snake_case` y usa `;` como separador.
+La versión utilizada usa nombres de columnas descriptivos en `snake_case` y `;` como separador.
+
+Los códigos de las variables son categorías discretas definidas por el dataset; no deben interpretarse automáticamente como magnitudes continuas ni relaciones causales.
