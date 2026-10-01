@@ -1,11 +1,15 @@
-# HESPE Student Performance — PySpark ML Pipeline
+# HESPE — Data Science con PySpark y Spark ML
 
-Proyecto de **Machine Learning con PySpark / Spark ML** para clasificar el rendimiento académico final de estudiantes mediante un pipeline reproducible de preprocesamiento, validación cruzada y selección de modelo.
+Proyecto de **Data Science con PySpark / Spark ML** para analizar y clasificar el rendimiento académico final de estudiantes mediante un flujo reproducible que integra EDA, preparación de datos, Machine Learning supervisado, validación cruzada, tuning e interpretación de resultados.
 
 [![PySpark Notebook CI](https://github.com/Koke-Oliva/hespe-pyspark-student-performance/actions/workflows/notebook-ci.yml/badge.svg?branch=main)](https://github.com/Koke-Oliva/hespe-pyspark-student-performance/actions/workflows/notebook-ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Apache Spark](https://img.shields.io/badge/Apache%20Spark-PySpark-E25A1C?logo=apachespark&logoColor=white)](https://spark.apache.org/)
 [![Spark ML](https://img.shields.io/badge/Spark%20ML-Pipeline-F28E2B)](https://spark.apache.org/docs/latest/ml-guide.html)
+
+<p align="center">
+  <img src="assets/hespe_data_science_pyspark.jpg" alt="HESPE — Data Science con PySpark y Spark ML" width="760">
+</p>
 
 > **Proyecto formativo de portafolio.** El dataset contiene 145 observaciones. Spark se utiliza para demostrar diseño de pipelines y procesamiento distribuible; este trabajo **no pretende demostrar una mejora de throughput por volumen**.
 
@@ -23,7 +27,7 @@ Proyecto de **Machine Learning con PySpark / Spark ML** para clasificar el rendi
 - **Predicciones a ±1 categoría:** **62.07%**.
 - **Reproducibilidad:** notebook validado end-to-end con Java 17 + PySpark en GitHub Actions.
 
-El valor del proyecto no está en presentar un modelo de alta precisión, sino en construir y auditar correctamente un **pipeline Spark reproducible** y reconocer las limitaciones de generalización de un dataset pequeño, desbalanceado y con ocho clases.
+El valor del proyecto no está en presentar un modelo de alta precisión, sino en demostrar un flujo completo de **Data Science sobre Spark**: análisis exploratorio, preparación distribuible, modelado supervisado, validación, tuning, evaluación e interpretación; además de reconocer las limitaciones de generalización de un dataset pequeño, desbalanceado y con ocho clases.
 
 ---
 
