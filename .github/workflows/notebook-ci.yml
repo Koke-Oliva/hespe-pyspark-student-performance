@@ -8,17 +8,10 @@ on:
       - "requirements.txt"
       - "data/**"
       - ".github/workflows/notebook-ci.yml"
-  push:
-    branches: [main]
-    paths:
-      - "hespe_pyspark_student_performance.ipynb"
-      - "requirements.txt"
-      - "data/**"
-      - ".github/workflows/notebook-ci.yml"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   execute-notebook:
@@ -26,8 +19,10 @@ jobs:
     timeout-minutes: 45
 
     steps:
-      - name: Checkout
+      - name: Checkout PR head
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -59,6 +54,22 @@ jobs:
             --execute hespe_pyspark_student_performance.ipynb \
             --output artifacts/hespe_pyspark_student_performance.executed.ipynb \
             --ExecutePreprocessor.timeout=2400
+
+      - name: Promote validated notebook
+        run: |
+          cp artifacts/hespe_pyspark_student_performance.executed.ipynb \
+             hespe_pyspark_student_performance.ipynb
+
+      - name: Commit validated outputs to PR branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hespe_pyspark_student_performance.ipynb figures/*.png
+          if ! git diff --cached --quiet; then
+            git commit -m "[skip ci] chore: refresh validated HESPE outputs"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
 
       - name: Upload executed notebook and figures
         if: always()
