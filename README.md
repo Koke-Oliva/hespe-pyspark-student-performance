@@ -29,9 +29,9 @@ El valor del proyecto no está en presentar un modelo de alta precisión, sino e
 
 ## Problema y formulación
 
-El caso HESPE plantea portar un modelo predictivo de rendimiento estudiantil a un entorno de procesamiento distribuido. La evaluación académica exige PySpark, un pipeline con preprocesamiento, validación cruzada y estimación, además de selección/tuning del modelo. fileciteturn351file0L20-L24
+El caso HESPE plantea portar un modelo predictivo de rendimiento estudiantil a un entorno de procesamiento distribuido. La evaluación académica exige PySpark, un pipeline con preprocesamiento, validación cruzada y estimación, además de selección/tuning del modelo.
 
-La entrega también exige problema/datos, EDA, aprendizaje supervisado en PySpark, conclusiones, orden y reproducibilidad. fileciteturn351file0L27-L43
+La entrega también exige problema/datos, EDA, aprendizaje supervisado en PySpark, conclusiones, orden y reproducibilidad.
 
 ### Decisión de modelado
 
@@ -340,4 +340,4 @@ Más información: [`data/README.md`](data/README.md).
 
 ## Contexto académico
 
-Proyecto desarrollado a partir de la evaluación final del módulo de Spark/Big Data del **Bootcamp de Ciencia de Datos — IT Academy / Kibernum, Talento Digital para Chile**. La pauta pedía explícitamente PySpark, pipeline, validación cruzada, tuning, EDA, modelo supervisado, conclusiones y reproducibilidad. fileciteturn351file0L20-L43
+Proyecto desarrollado a partir de la evaluación final del módulo de Spark/Big Data del **Bootcamp de Ciencia de Datos — IT Academy / Kibernum, Talento Digital para Chile**. La pauta pedía explícitamente PySpark, pipeline, validación cruzada, tuning, EDA, modelo supervisado, conclusiones y reproducibilidad.
